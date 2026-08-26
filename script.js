@@ -722,6 +722,11 @@
     let twImg = document.querySelector('meta[name="twitter:image"]');
     if (twImg) twImg.setAttribute('content', fullImgUrl);
 
+    // Clean address bar URL so copying link from address bar copies slug.html URL
+    if (window.history && window.history.replaceState) {
+      window.history.replaceState({}, '', `${slug}.html`);
+    }
+
     // Render Comments
     renderComments(slug);
   };
@@ -765,6 +770,11 @@
     if (ogSecImg) ogSecImg.setAttribute('content', fullImgUrl);
     let twImg = document.querySelector('meta[name="twitter:image"]');
     if (twImg) twImg.setAttribute('content', fullImgUrl);
+
+    // Clean address bar URL so copying link from address bar copies slug.html URL
+    if (window.history && window.history.replaceState) {
+      window.history.replaceState({}, '', `${slug}.html`);
+    }
   };
 
   // --- Projects Filtering (projects.html) ---
