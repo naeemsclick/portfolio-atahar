@@ -247,11 +247,12 @@
 
   function applyLanguage(lang) {
     currentLang = lang;
+    localStorage.setItem('site_lang', lang);
     const dict = translations[lang];
 
     document.querySelectorAll('[data-i18n]').forEach((el) => {
       const key = el.getAttribute('data-i18n');
-      if (dict[key]) {
+      if (dict && dict[key]) {
         el.innerHTML = dict[key];
       }
     });
@@ -259,6 +260,16 @@
     const langBtnText = document.getElementById('lang-btn-text');
     if (langBtnText) {
       langBtnText.textContent = lang === 'en' ? 'Bangla' : 'English';
+    }
+
+    // Re-render blog/project detail pages dynamically upon language switch
+    const urlParams = new URLSearchParams(window.location.search);
+    const slug = urlParams.get('slug');
+    if (document.getElementById('detail-title') && typeof window.renderBlogDetailPage === 'function') {
+      window.renderBlogDetailPage(slug || '10-essential-video-editing-workflows-in-premiere-pro-after-effects');
+    }
+    if (document.getElementById('project-title') && typeof window.renderProjectDetailPage === 'function') {
+      window.renderProjectDetailPage(slug || 'motivational-video-series-production-for-chirayat');
     }
   }
 
@@ -898,7 +909,8 @@
     preloadImages();
     onScroll();
     initHeaderButtons();
-    applyLanguage('en');
+    const savedLang = localStorage.getItem('site_lang') || 'en';
+    applyLanguage(savedLang);
     if (canvas) {
       animationFrameId = requestAnimationFrame(updateAnimation);
     }
