@@ -148,6 +148,43 @@
           </button>
         </div>
 
+        <!-- Blog Comments Section -->
+        <section class="blog-comments-section" style="margin-top: 50px; background: rgba(34, 34, 32, 0.7); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 20px; padding: 32px;">
+          <h3 style="font-size: 22px; font-weight: 800; color: var(--text-white); margin-bottom: 8px; display: flex; align-items: center; gap: 10px;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent-teal)" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            <span data-i18n="comments_title">Leave a Comment</span>
+          </h3>
+          <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 24px;" data-i18n="comments_subtitle">Join the discussion! Your email address will not be published.</p>
+
+          <form id="blog-comment-form" onsubmit="handleCommentSubmit(event)" style="display: flex; flex-direction: column; gap: 16px;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px;">
+              <div>
+                <label style="font-size: 13px; font-weight: 600; color: var(--text-white); margin-bottom: 6px; display: block;" data-i18n="comment_name_lbl">Name *</label>
+                <input type="text" id="comment-name" required placeholder="Your full name" style="width: 100%; background: rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.15); padding: 12px 16px; border-radius: 10px; color: #fff; font-size: 14px; outline: none;">
+              </div>
+              <div>
+                <label style="font-size: 13px; font-weight: 600; color: var(--text-white); margin-bottom: 6px; display: block;" data-i18n="comment_email_lbl">Email *</label>
+                <input type="email" id="comment-email" required placeholder="name@example.com" style="width: 100%; background: rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.15); padding: 12px 16px; border-radius: 10px; color: #fff; font-size: 14px; outline: none;">
+              </div>
+            </div>
+            <div>
+              <label style="font-size: 13px; font-weight: 600; color: var(--text-white); margin-bottom: 6px; display: block;" data-i18n="comment_text_lbl">Comment *</label>
+              <textarea id="comment-text" required rows="4" placeholder="Write your comment or question here..." style="width: 100%; background: rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.15); padding: 12px 16px; border-radius: 10px; color: #fff; font-size: 14px; outline: none; resize: vertical;"></textarea>
+            </div>
+            <button type="submit" class="btn-pill-orange-cta" style="align-self: flex-start; padding: 12px 24px; font-size: 14px;">
+              <span data-i18n="comment_btn">Post Comment</span> →
+            </button>
+          </form>
+
+          <!-- Dynamic Comments List -->
+          <div style="margin-top: 36px; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 24px;">
+            <h4 style="font-size: 18px; font-weight: 700; color: var(--text-white); margin-bottom: 20px;" id="comments-count-title">Comments</h4>
+            <div id="comments-list" style="display: flex; flex-direction: column; gap: 16px;">
+              <!-- Inserted via script.js -->
+            </div>
+          </div>
+        </section>
+
       </article>
 
     </main>

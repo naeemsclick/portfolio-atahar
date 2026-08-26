@@ -384,11 +384,13 @@
     });
   };
 
-  // --- Full Blog & Project Detail Page Data Stores ---
+  // --- Full Blog & Project Detail Page Data Stores (Bilingual: EN & BN) ---
   const blogPostsData = {
     '10-essential-video-editing-workflows-in-premiere-pro-after-effects': {
       title: '10 Essential Video Editing Workflows in Premiere Pro & After Effects',
+      titleBn: 'প্রিমিয়ার প্রো এবং আফটার ইফেক্টসে ১০টি গুরুত্বপূর্ণ ভিডিও এডিটিং ওয়ার্কফ্লো',
       category: 'Video Editing',
+      categoryBn: 'ভিডিও এডিটিং',
       date: 'Aug 24, 2026',
       views: '1,420',
       image: 'card1.jpg',
@@ -401,15 +403,31 @@
         <h3 style="font-size:20px; font-weight:800; color:var(--text-white); margin:24px 0 12px;">3. Color Space Consistency</h3>
         <p>Always align color space profiles between Lumetri Color and After Effects composition settings to prevent gamma shifts upon export.</p>
       `,
+      contentBn: `
+        <p>আধুনিক ভিডিও এডিটিংয়ে কাজের গতি এবং দক্ষতা ভিজ্যুয়াল ক্রিয়েটিভিটির মতোই অত্যন্ত গুরুত্বপূর্ণ। ব্র্যান্ডের জন্য দ্রুত কন্টেন্ট ডেলিভারি, চ্যানেল গ্রোথ বা বাণিজ্যিক বিজ্ঞাপনের প্রজেক্ট পরিচালনা করার সময় সঠিক ওয়ার্কফ্লো জানা থাকলে বহু সময় বাঁচে।</p>
+        <h3 style="font-size:20px; font-weight:800; color:var(--text-white); margin:24px 0 12px;">১. ডাইনামিক লিংক অপটিমাইজেশন</h3>
+        <p>প্রিমিয়ার প্রো এবং আফটার ইফেক্টসের মধ্যে অ্যাডোবি ডাইনামিক লিংক ব্যবহার করলে মধ্যবর্তী ফাইল রেন্ডার ছাড়াই সরাসরি মোশন গ্রাফিক্স যুক্ত করা যায়। রিয়েল-টাইম প্লেব্যাকের জন্য আপনার টাইমলাইন ক্যাশ দ্রুতগতির NVMe SSD-তে রাখুন।</p>
+        <h3 style="font-size:20px; font-weight:800; color:var(--text-white); margin:24px 0 12px;">২. কাস্টমাইজড কিবোর্ড শর্টকাট ও প্যানকেক এডিটিং</h3>
+        <p>দুটি সিকোয়েন্স টাইমলাইন একটির উপর আরেকটি রেখে প্যানকেক এডিটিং করুন। মূল টাইমলাইনে দ্রুত ফাইল ট্রিম করে রিফল এডিট শর্টকাট ব্যবহার করুন।</p>
+        <h3 style="font-size:20px; font-weight:800; color:var(--text-white); margin:24px 0 12px;">৩. কালার স্পেস ধারাবাহিকতা</h3>
+        <p>লুমেট্রি কালার এবং আফটার ইফেক্টস কম্পোজিশনের কালার প্রোফাইল সবসময় মিলিয়ে রাখুন যাতে এক্সপোর্টের পর কালার পরিবর্তন না হয়।</p>
+      `,
       takeaways: [
         'Dynamic link eliminates rendering bottlenecks between Premiere Pro & After Effects.',
         'Pancake editing increases rough-cut assembly speed by over 40%.',
         'NVMe cache allocation prevents timeline drop-frame stutters.'
+      ],
+      takeawaysBn: [
+        'ডাইনামিক লিংক ব্যবহার করলে রেন্ডারিং ছাড়াই আফটার ইফেক্টস ও প্রিমিয়ার প্রোতে কাজ করা যায়।',
+        'প্যানকেক এডিটিং কৌশল ভিডিও কাটছাঁট ও অ্যাসেম্বলির গতি ৪০% বাড়ায়।',
+        'NVMe ক্যাশ বরাদ্দ টাইমলাইনে ফ্রেম ড্রপ বন্ধ করে।'
       ]
     },
     'how-to-rank-youtube-videos-in-2026-complete-seo-masterclass': {
       title: 'How to Rank YouTube Videos in 2026: Complete SEO Masterclass',
+      titleBn: '২০২৬ সালে ইউটিউব ভিডিও র‍্যাংক করার উপায়: কমপ্লিট এসইও মাস্টারক্লাস',
       category: 'YouTube SEO',
+      categoryBn: 'ইউটিউব এসইও',
       date: 'Aug 20, 2026',
       views: '2,850',
       image: 'atahar_noor.jpg',
@@ -419,83 +437,115 @@
         <p>Combine high-volume search terms with curiosity triggers. Place core keywords within the first 30 characters of the title.</p>
         <h3 style="font-size:20px; font-weight:800; color:var(--text-white); margin:24px 0 12px;">2. High CTR Thumbnail Formula</h3>
         <p>Use high contrast colors (#f15722 orange combined with #2c8f8f teal), expressive human faces, and maximum 3 bold words of text overlay.</p>
-        <h3 style="font-size:20px; font-weight:800; color:var(--text-white); margin:24px 0 12px;">3. First 30 Seconds Retention Hook</h3>
-        <p>Eliminate lengthy intros. State the exact promise of the video immediately within the first 5 seconds to prevent viewer bounce.</p>
+      `,
+      contentBn: `
+        <p>ইউটিউব হলো বিশ্বের দ্বিতীয় বৃহত্তম সার্চ ইঞ্জিন। ২০২৬ সালে সার্চ এবং সাজেস্টেড ভিডিও ফিডে আপনার কন্টেন্ট র‍্যাংক করাতে হলে দুটি মূল ম্যাট্রিক্স বুঝতে হবে: ক্লিক-থ্রু রেট (CTR) এবং এভারেজ পার্সেন্টেজ ভিউড (APV)।</p>
+        <h3 style="font-size:20px; font-weight:800; color:var(--text-white); margin:24px 0 12px;">১. কিওয়ার্ড ইনটেন্ট এবং টাইটেল ফরম্যাটিং</h3>
+        <p>উচ্চ সার্চ ভলিউম কিওয়ার্ডের সাথে কৌতুহল তৈরি করার মতো শব্দ যুক্ত করুন। টাইটেলের প্রথম ৩০ অক্ষরের মধ্যে মূল কিওয়ার্ড রাখুন।</p>
+        <h3 style="font-size:20px; font-weight:800; color:var(--text-white); margin:24px 0 12px;">২. হাই সিটিআর থাম্বনেইল ফর্মুলা</h3>
+        <p>উচ্চ কনট্রাস্ট কালার (#f15722 অরেঞ্জ এবং #2c8f8f ডিপ টিল), স্পষ্ট ফেস এক্সপ্রেশন এবং সর্বোচ্চ ৩টি বোল্ড শব্দের কাস্টম থাম্বনেইল ব্যবহার করুন।</p>
       `,
       takeaways: [
         'Place primary keywords within the first 30 characters of video titles.',
         'High contrast dual-color thumbnails boost CTR above 10%.',
         'Intros shorter than 5 seconds maximize first-minute retention.'
+      ],
+      takeawaysBn: [
+        'ভিডিও টাইটেলের প্রথম ৩০ অক্ষরের মধ্যে মূল কিওয়ার্ড রাখুন।',
+        'উচ্চ কনট্রাস্ট থাম্বনেইল ডিজাইন CTR ১০% এর উপরে বাড়ায়।',
+        '৫ সেকেন্ডের কম ইন্ট্রো প্রথম মিনিটের ভিউয়ার রিটেনশন বাড়ায়।'
       ]
     },
     'the-art-of-islamic-nasheed-production-behind-the-scenes': {
       title: 'The Art of Islamic Nasheed Production: Behind the Scenes',
+      titleBn: 'ইসলামিক নাশিদ প্রোডাকশনের শিল্প ও নেপথ্যের গল্প',
       category: 'Nasheed Art',
+      categoryBn: 'নাশিদ আর্ট',
       date: 'Aug 18, 2026',
       views: '3,100',
       image: 'card3.jpg',
       content: `
         <p>Islamic Nasheed production combines vocal artistry, spiritual depth, and visual direction. Creating impactful nasheed tracks requires precise vocal layering, vocal percussion balancing, and evocative lighting setups.</p>
-        <h3 style="font-size:20px; font-weight:800; color:var(--text-white); margin:24px 0 12px;">1. Vocal Harmony Stacking</h3>
-        <p>Layering lead vocals with 4 to 8 background vocal harmonies creates an immersive acoustic choir feel without instruments.</p>
-        <h3 style="font-size:20px; font-weight:800; color:var(--text-white); margin:24px 0 12px;">2. Visual Storytelling & Lighting</h3>
-        <p>Utilizing low-key studio lighting, warm rim lights, and subtle atmospheric fog builds a reflective, spiritual atmosphere matching the lyrics.</p>
+      `,
+      contentBn: `
+        <p>ইসলামিক নাশিদ প্রোডাকশন হলো ভোকাল আর্ট, আধ্যাত্মিক আবেগ এবং ভিজ্যুয়াল ডিরেকশনের এক অপূর্ব মেলবন্ধন। একটি অর্থপূর্ণ নাশিদ তৈরির জন্য নিখুঁত ভোকাল লেয়ারিং, ভোকাল পারকাশন ব্যালেন্সিং এবং গভীর লাইটিং প্রয়োজন।</p>
       `,
       takeaways: [
         'Multi-tracked vocal harmonies create a rich acoustic experience.',
-        'Low-key lighting and atmospheric depth match spiritual themes.',
-        'Vocal equalization ensures crystal-clear lyrics delivery.'
+        'Low-key lighting and atmospheric depth match spiritual themes.'
+      ],
+      takeawaysBn: [
+        'মাল্টি-ট্র্যাকড ভোকাল হারমোনি রিচ অ্যাকোস্টিক অভিজ্ঞতা তৈরি করে।',
+        'লো-কি লাইটিং এবং বায়ুমণ্ডলীয় গভীরতা ইসলামিক থিমের সাথে মানিয়ে যায়।'
       ]
     },
     'color-grading-secrets-in-davinci-resolve-for-cinematic-look': {
       title: 'Color Grading Secrets in DaVinci Resolve for Cinematic Look',
+      titleBn: 'সিনেম্যাটিক লুকের জন্য ড্যাভিঞ্চি রিজলভের কালার গ্রেডিং গোপন কৌশল',
       category: 'Cinematography',
+      categoryBn: 'সিনেমাটোগ্রাফি',
       date: 'Aug 15, 2026',
       views: '980',
       image: 'card3.jpg',
       content: `
         <p>DaVinci Resolve is the industry standard for color grading. Achieving a polished, cinematic film look requires structured node trees and careful skin tone isolation.</p>
-        <h3 style="font-size:20px; font-weight:800; color:var(--text-white); margin:24px 0 12px;">1. Node Tree Architecture</h3>
-        <p>Keep exposure, white balance, and contrast nodes separate from creative LUT grading nodes to ensure clean signal control.</p>
-        <h3 style="font-size:20px; font-weight:800; color:var(--text-white); margin:24px 0 12px;">2. Complementary Teal & Orange Contrast</h3>
-        <p>Pushing shadows slightly into #2c8f8f teal while keeping skin tones warm (#f15722 orange tint) builds instant cinematic pop.</p>
+      `,
+      contentBn: `
+        <p>ড্যাভিঞ্চি রিজলভ হলো কালার গ্রেডিংয়ের জন্য ইন্ডাস্ট্রির সেরা সফটওয়্যার। একটি নিখুঁত সিনেম্যাটিক ফিল্ম লুক পেতে সুনির্দিষ্ট নোড স্ট্রাকচার এবং স্কিন টোন ব্যালেন্স প্রয়োজন।</p>
       `,
       takeaways: [
         'Separate primary balancing nodes from creative color look nodes.',
-        'Protect natural skin tones on the vector scope indicator line.',
-        'Complementary teal shadows and warm highlights create film depth.'
+        'Protect natural skin tones on the vector scope indicator line.'
+      ],
+      takeawaysBn: [
+        'প্রাইমারি ব্যালেন্সিং নোড এবং ক্রিয়েটিভ কালার নোড আলাদা রাখুন।',
+        'ভেক্টরস্কোপ ইন্ডিকেটরে প্রাকৃতিক স্কিন টোন বজায় রাখুন।'
       ]
     },
     'building-chirayat-leadership-creative-direction-journey': {
       title: 'Building Chirayat: Leadership & Creative Direction Journey',
+      titleBn: 'চিরায়ত গড়ে তোলার গল্প: নেতৃত্ব ও ক্রিয়েটিভ ডিরেকশনের অভিজ্ঞতা',
       category: 'Video Editing',
+      categoryBn: 'ভিডিও এডিটিং',
       date: 'Aug 10, 2026',
       views: '1,750',
       image: 'card1.jpg',
       content: `
         <p>Leading Chirayat as CEO has been a rewarding journey of aligning visual storytelling, brand building, and creative leadership. From initial video concepts to managing full production pipelines, quality commitment is non-negotiable.</p>
-        <h3 style="font-size:20px; font-weight:800; color:var(--text-white); margin:24px 0 12px;">1. Vision & Brand Consistency</h3>
-        <p>Every video produced under Chirayat maintains high standards in editing tempo, sound design, and color grading.</p>
+      `,
+      contentBn: `
+        <p>সিইও হিসেবে 'চিরায়ত' পরিচালনা করা ভিজ্যুয়াল স্টোরিটেলিং, ব্র্যান্ড বিল্ডিং এবং ক্রিয়েটিভ লিডারশিপের একটি দারুণ যাত্রা। ভিডিও আইডিয়া থেকে শুরু করে পূর্ণাঙ্গ প্রোডাকশন পাইপলাইন পরিচালনা করার অভিজ্ঞতা অসাধারণ।</p>
       `,
       takeaways: [
         'Creative leadership relies on clear brand standards.',
         'High production quality builds long-term client trust.'
+      ],
+      takeawaysBn: [
+        'ক্রিয়েটিভ লিডারশিপের ভিত্তি হলো স্পষ্ট ব্র্যান্ড স্ট্যান্ডার্ড।',
+        'উচ্চমানের ভিডিও প্রডাকশন দীর্ঘমেয়াদী ক্লায়েন্ট ট্রাস্ট তৈরি করে।'
       ]
     },
     'lighting-setup-camera-gear-guide-for-professional-cinematography': {
       title: 'Lighting Setup & Camera Gear Guide for Professional Cinematography',
+      titleBn: 'প্রফেশনাল সিনেমাটোগ্রাফির লাইটিং সেটআপ ও ক্যামেরা গিয়ার গাইড',
       category: 'Cinematography',
+      categoryBn: 'সিনেমাটোগ্রাফি',
       date: 'Aug 05, 2026',
       views: '2,210',
       image: 'card3.jpg',
       content: `
         <p>Great video quality starts with light quality before editing begins. Understanding key lights, fill lights, and hair rim lights creates 3D depth on flat screens.</p>
-        <h3 style="font-size:20px; font-weight:800; color:var(--text-white); margin:24px 0 12px;">1. 3-Point Studio Lighting Setup</h3>
-        <p>Position your key softbox light 45 degrees off-axis, use a subtle fill reflector, and add a rim backlight for background separation.</p>
+      `,
+      contentBn: `
+        <p>ভালো ভিডিও কোয়ালিটি এডিটিং শুরু হওয়ার আগেই লাইটিংয়ের সঠিক ব্যবহারের উপর নির্ভর করে। কি লাইট, ফিল লাইট এবং রিম লাইটের সঠিক ব্যবহার ফ্ল্যাট স্ক্রিনে থ্রিডি ডেপথ আনে।</p>
       `,
       takeaways: [
         'Soft key light positioning at 45 degrees flatters subject features.',
         'Backlight rim separation adds 3D depth to 2D footage.'
+      ],
+      takeawaysBn: [
+        '৪৫ ডিগ্রি এঙ্গেলে সফট কি লাইট পজিশনিং সাবজেক্টের ভিজ্যুয়াল উন্নত করে।',
+        'ব্যাকলাইট রিম সেপারেশন ভিডিওতে ৩ডি ডেপথ তৈরি করে।'
       ]
     }
   };
@@ -503,49 +553,136 @@
   const projectsData = {
     'motivational-video-series-production-for-chirayat': {
       title: 'Motivational Video Series Production for Chirayat',
+      titleBn: 'চিরায়তের জন্য মোটিভেশনাল ভিডিও সিরিজ প্রোডাকশন',
       category: 'Cinematography & Editing',
+      categoryBn: 'সিনেমাটোগ্রাফি এবং এডিটিং',
       client: 'Chirayat Media (@chirayat2.0)',
       role: 'CEO, Lead Cinematographer & Editor',
+      roleBn: 'সিইও, প্রধান সিনেমাটোগ্রাফার এবং এডিটর',
       views: '4,850 Views',
       tools: 'Premiere Pro, DaVinci Resolve, Sony A7SIII',
       image: 'card1.jpg',
       content: `
         <p>A flagship motivational video production series created for Chirayat. The objective was to produce visually striking, emotionally resonant videos with professional cinematography, dynamic cuts, and custom sound design.</p>
-        <h3 style="font-size:20px; font-weight:800; color:var(--text-white); margin:24px 0 12px;">Production Workflow</h3>
-        <p>Shot using Sony cinema cameras with 35mm prime lenses for deep depth of field. Post-production included multi-cam sync, speech enhancement, custom motion graphics in After Effects, and teal-orange color grading in DaVinci Resolve.</p>
+      `,
+      contentBn: `
+        <p>চিরায়তের জন্য তৈরি একটি ফ্ল্যাগশিপ মোটিভেশনাল ভিডিও প্রোডাকশন সিরিজ। লক্ষ্য ছিল সিনেমাটোগ্রাফি, ডাইনামিক কাট এবং কাস্টম সাউন্ড ডিজাইনের মাধ্যমে নান্দনিক ভিডিও উপহার দেওয়া।</p>
       `
     },
     'islamic-music-video-nasheed-visual-direction': {
       title: 'Islamic Music Video & Nasheed Visual Direction',
+      titleBn: 'ইসলামিক মিউজিক ভিডিও এবং নাশিদ ভিজ্যুয়াল ডিরেকশন',
       category: 'Nasheed & Visuals',
+      categoryBn: 'নাশিদ এবং ভিজ্যুয়াল',
       client: 'Nasheed Channel (@ataharnoormunnaartist)',
       role: 'Nasheed Artist & Creative Director',
+      roleBn: 'নাশিদ শিল্পী এবং ক্রিয়েটিভ ডিরেক্টর',
       views: '9,120 Views',
       tools: 'After Effects, Audition, Filmora Pro',
       image: 'card3.jpg',
       content: `
         <p>Complete visual direction and post-production for top Islamic Nasheed releases. Focused on spiritual aesthetic lighting, acoustic vocal harmonies, and cinematic color contrast.</p>
+      `,
+      contentBn: `
+        <p>শীর্ষস্থানীয় ইসলামিক নাশিদের জন্য পূর্ণাঙ্গ ভিজ্যুয়াল ডিরেকশন এবং পোস্ট-প্রোডাকশন। আধ্যাত্মিক এস্থেটিক লাইটিং এবং সিনেমাটোগ্রাফিক কালার কনট্রাস্টে ফোকাস করা হয়েছে।</p>
       `
     },
     'client-channel-growth-0-to-100k-subscribers-case-study': {
       title: 'Client Channel Growth: 0 to 100K Subscribers Case Study',
+      titleBn: 'ক্লায়েন্ট চ্যানেল গ্রোথ: ০ থেকে ১০০কে সাবস্ক্রাইবার কেস স্টাডি',
       category: 'YouTube SEO',
+      categoryBn: 'ইউটিউব এসইও',
       client: 'Partner Media Company',
       role: 'YouTube SEO Strategist & Consultant',
+      roleBn: 'ইউটিউব এসইও স্ট্র্যাটেজিস্ট এবং কনসালটেন্ট',
       views: '6,340 Views',
       tools: 'YouTube Studio, VidIQ, Photoshop, SEO Analytics',
       image: 'atahar_noor.jpg',
       content: `
         <p>A comprehensive YouTube channel growth case study demonstrating 0 to 100K subscriber scaling through SEO keyword placement, custom thumbnail design, and audience retention optimization.</p>
+      `,
+      contentBn: `
+        <p>এসইও কিওয়ার্ড প্লেসমেন্ট, কাস্টম থাম্বনেইল ডিজাইন এবং ভিউয়ার রিটেনশন অপটিমাইজেশনের মাধ্যমে ০ থেকে ১০০ হাজার সাবস্ক্রাইবারে উন্নীত করার কেস স্টাডি।</p>
       `
     }
   };
+
+  // --- Dynamic Detail Page Comments ---
+  window.renderComments = function (slug) {
+    const listContainer = document.getElementById('comments-list');
+    const titleEl = document.getElementById('comments-count-title');
+    if (!listContainer) return;
+
+    const savedComments = JSON.parse(localStorage.getItem(`blog_comments_${slug}`) || '[]');
+    if (titleEl) {
+      titleEl.textContent = `Comments (${savedComments.length})`;
+    }
+
+    if (savedComments.length === 0) {
+      listContainer.innerHTML = `<p style="font-size:14px; color:var(--text-muted); font-style:italic;">No comments yet. Be the first to share your thoughts!</p>`;
+      return;
+    }
+
+    listContainer.innerHTML = savedComments.map(c => `
+      <div style="background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.06); padding: 16px; border-radius: 12px; display: flex; gap: 12px; align-items: flex-start;">
+        <div style="width: 38px; height: 38px; border-radius: 50%; background: var(--accent-teal); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 16px; flex-shrink: 0;">
+          ${escapeHtml(c.name.charAt(0).toUpperCase())}
+        </div>
+        <div style="flex: 1;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+            <h5 style="font-size: 15px; font-weight: 700; color: var(--text-white); margin: 0;">${escapeHtml(c.name)}</h5>
+            <span style="font-size: 12px; color: var(--text-muted);">${c.date}</span>
+          </div>
+          <p style="font-size: 14px; color: var(--text-muted); margin: 0; line-height: 1.5;">${escapeHtml(c.text)}</p>
+        </div>
+      </div>
+    `).join('');
+  };
+
+  window.handleCommentSubmit = function (e) {
+    e.preventDefault();
+    const urlParams = new URLSearchParams(window.location.search);
+    const slug = urlParams.get('slug') || '10-essential-video-editing-workflows-in-premiere-pro-after-effects';
+
+    const nameInput = document.getElementById('comment-name');
+    const emailInput = document.getElementById('comment-email');
+    const textInput = document.getElementById('comment-text');
+
+    if (!nameInput || !textInput) return;
+
+    const newComment = {
+      name: nameInput.value.trim(),
+      email: emailInput ? emailInput.value.trim() : '',
+      text: textInput.value.trim(),
+      date: new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
+    };
+
+    const savedComments = JSON.parse(localStorage.getItem(`blog_comments_${slug}`) || '[]');
+    savedComments.unshift(newComment);
+    localStorage.setItem(`blog_comments_${slug}`, JSON.stringify(savedComments));
+
+    textInput.value = '';
+    alert('Thank you! Your comment has been posted successfully.');
+    renderComments(slug);
+  };
+
+  function escapeHtml(str) {
+    return String(str).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+  }
 
   window.renderBlogDetailPage = function (slug) {
     const post = blogPostsData[slug] || blogPostsData['10-essential-video-editing-workflows-in-premiere-pro-after-effects'];
     if (!post) return;
 
-    document.title = `${post.title} — Atahar Noor Munna`;
+    const currentLang = localStorage.getItem('site_lang') || 'en';
+    const isBn = currentLang === 'bn';
+
+    const title = isBn ? (post.titleBn || post.title) : post.title;
+    const category = isBn ? (post.categoryBn || post.category) : post.category;
+    const content = isBn ? (post.contentBn || post.content) : post.content;
+    const takeaways = isBn ? (post.takeawaysBn || post.takeaways) : post.takeaways;
+
+    document.title = `${title} — Atahar Noor Munna`;
     const titleEl = document.getElementById('detail-title');
     const catEl = document.getElementById('detail-category');
     const dateEl = document.getElementById('detail-date');
@@ -554,23 +691,43 @@
     const contentEl = document.getElementById('detail-content');
     const takeawaysEl = document.getElementById('detail-takeaways');
 
-    if (titleEl) titleEl.textContent = post.title;
-    if (catEl) catEl.textContent = post.category.toUpperCase();
+    if (titleEl) titleEl.textContent = title;
+    if (catEl) catEl.textContent = category.toUpperCase();
     if (dateEl) dateEl.textContent = post.date;
     if (viewsEl) viewsEl.textContent = post.views;
     if (imgEl) imgEl.src = post.image;
-    if (contentEl) contentEl.innerHTML = post.content;
+    if (contentEl) contentEl.innerHTML = content;
 
-    if (takeawaysEl && post.takeaways) {
-      takeawaysEl.innerHTML = post.takeaways.map(t => `<li style="margin-bottom:8px;">${t}</li>`).join('');
+    if (takeawaysEl && takeaways) {
+      takeawaysEl.innerHTML = takeaways.map(t => `<li style="margin-bottom:8px;">${t}</li>`).join('');
     }
+
+    // Dynamic Social Meta Image & Title Update
+    const fullImgUrl = `https://portfolio-atahar.pages.dev/${post.image}`;
+    let ogImg = document.querySelector('meta[property="og:image"]');
+    if (ogImg) ogImg.setAttribute('content', fullImgUrl);
+    let ogSecImg = document.querySelector('meta[property="og:image:secure_url"]');
+    if (ogSecImg) ogSecImg.setAttribute('content', fullImgUrl);
+    let twImg = document.querySelector('meta[name="twitter:image"]');
+    if (twImg) twImg.setAttribute('content', fullImgUrl);
+
+    // Render Comments
+    renderComments(slug);
   };
 
   window.renderProjectDetailPage = function (slug) {
     const proj = projectsData[slug] || projectsData['motivational-video-series-production-for-chirayat'];
     if (!proj) return;
 
-    document.title = `${proj.title} — Project Case Study`;
+    const currentLang = localStorage.getItem('site_lang') || 'en';
+    const isBn = currentLang === 'bn';
+
+    const title = isBn ? (proj.titleBn || proj.title) : proj.title;
+    const category = isBn ? (proj.categoryBn || proj.category) : proj.category;
+    const role = isBn ? (proj.roleBn || proj.role) : proj.role;
+    const content = isBn ? (proj.contentBn || proj.content) : proj.content;
+
+    document.title = `${title} — Project Case Study`;
     const titleEl = document.getElementById('project-title');
     const catEl = document.getElementById('project-category');
     const clientEl = document.getElementById('project-client');
@@ -580,14 +737,23 @@
     const imgEl = document.getElementById('project-image');
     const contentEl = document.getElementById('project-content');
 
-    if (titleEl) titleEl.textContent = proj.title;
-    if (catEl) catEl.textContent = proj.category.toUpperCase();
+    if (titleEl) titleEl.textContent = title;
+    if (catEl) catEl.textContent = category.toUpperCase();
     if (clientEl) clientEl.textContent = proj.client;
-    if (roleEl) roleEl.textContent = proj.role;
+    if (roleEl) roleEl.textContent = role;
     if (viewsEl) viewsEl.textContent = proj.views;
     if (toolsEl) toolsEl.textContent = proj.tools;
     if (imgEl) imgEl.src = proj.image;
-    if (contentEl) contentEl.innerHTML = proj.content;
+    if (contentEl) contentEl.innerHTML = content;
+
+    // Dynamic Social Meta Image & Title Update
+    const fullImgUrl = `https://portfolio-atahar.pages.dev/${proj.image}`;
+    let ogImg = document.querySelector('meta[property="og:image"]');
+    if (ogImg) ogImg.setAttribute('content', fullImgUrl);
+    let ogSecImg = document.querySelector('meta[property="og:image:secure_url"]');
+    if (ogSecImg) ogSecImg.setAttribute('content', fullImgUrl);
+    let twImg = document.querySelector('meta[name="twitter:image"]');
+    if (twImg) twImg.setAttribute('content', fullImgUrl);
   };
 
   // --- Projects Filtering (projects.html) ---
