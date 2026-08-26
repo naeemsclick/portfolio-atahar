@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="page-title">Project Case Study — Atahar Noor Munna</title>
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Project Case Study — Atahar Noor Munna">
+  <meta property="og:description" content="Cinematography, Video Editing & Visual Direction Showcase.">
+  <meta property="og:image" content="card1.jpg">
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="subpage-bg">
+
+  <div class="sparkle-container">
+    <div class="sparkle" style="left:20%; animation-delay:0.5s;"></div>
+    <div class="sparkle" style="left:50%; animation-delay:2.5s;"></div>
+    <div class="sparkle" style="left:80%; animation-delay:1s;"></div>
+  </div>
+
+  <div class="content-wrapper">
+
+    <!-- Header Navbar -->
+    <header class="navbar">
+      <div class="navbar-inner">
+        <a href="index.html" class="nav-brand">
+          <img src="logo.png" alt="Atahar Noor Munna Logo" class="brand-logo-img">
+          <div class="brand-text">
+            <span class="brand-name">Atahar Noor Munna</span>
+            <span class="brand-sub" data-i18n="brand_sub">CREATIVE VISUALIZER</span>
+          </div>
+        </a>
+
+        <nav class="nav-menu">
+          <ul class="nav-links">
+            <li><a href="index.html" class="nav-link" data-i18n="nav_home">Home</a></li>
+            <li><a href="index.html#about" class="nav-link" data-i18n="nav_about">About Me</a></li>
+            <li><a href="projects.html" class="nav-link active"><span data-i18n="nav_projects">Project</span> <span class="active-dot"></span></a></li>
+            <li><a href="index.html#experience" class="nav-link" data-i18n="nav_experience">Experience</a></li>
+            <li><a href="index.html#skills" class="nav-link" data-i18n="nav_skills">Skill</a></li>
+            <li><a href="index.html#education" class="nav-link" data-i18n="nav_education">Education</a></li>
+            <li><a href="blog.html" class="nav-link" data-i18n="nav_blog">Blog</a></li>
+          </ul>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="nav-lang-btn" id="lang-toggle-btn" aria-label="Switch Language">
+            <span class="lang-icon-wrap">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              </svg>
+            </span>
+            <span id="lang-btn-text">Bangla</span>
+          </button>
+
+          <button class="btn-pill-orange-cta" onclick="openConsultationModal()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+            <span data-i18n="lets_talk">Let's Talk</span>
+          </button>
+
+          <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Detail Container -->
+    <main style="padding: 120px 24px 60px; max-width: 950px; margin: 0 auto; width: 100%;">
+      
+      <!-- Back Navigation -->
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:28px;">
+        <a href="projects.html" style="display:inline-flex; align-items:center; gap:8px; color:var(--accent-teal); font-weight:700; text-decoration:none; font-size:14px; background:rgba(44,143,143,0.12); border:1px solid rgba(44,143,143,0.3); padding:8px 16px; border-radius:30px; transition:all 0.25s ease;" onmouseover="this.style.background='rgba(44,143,143,0.25)'" onmouseout="this.style.background='rgba(44,143,143,0.12)'">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+          Back to All Projects
+        </a>
+
+        <button onclick="navigator.clipboard.writeText(window.location.href); alert('Project Link copied to clipboard!');" style="display:inline-flex; align-items:center; gap:6px; color:var(--text-muted); background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.12); padding:8px 14px; border-radius:30px; font-size:13px; font-weight:600; cursor:pointer;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+          Share Project Case Study
+        </button>
+      </div>
+
+      <!-- Project Header Banner -->
+      <article>
+        <div style="margin-bottom: 28px;">
+          <span id="project-category" class="hero-tag" style="background:rgba(241,87,34,0.15); border-color:rgba(241,87,34,0.35); color:var(--accent-orange); font-size:12px;">CINEMATOGRAPHY & EDITING</span>
+          <h1 id="project-title" style="font-size: clamp(28px, 4vw, 44px); font-weight: 800; line-height: 1.25; margin: 12px 0 16px; color: var(--text-white); letter-spacing: -0.5px;">
+            Loading Project Title...
+          </h1>
+          
+          <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap:16px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); padding:20px; border-radius:16px; margin-top:20px;">
+            <div>
+              <span style="display:block; font-size:11px; color:var(--accent-teal); font-weight:700; text-transform:uppercase; letter-spacing:0.8px;">CLIENT / BRAND</span>
+              <strong id="project-client" style="font-size:14.5px; color:var(--text-white);">Chirayat Media</strong>
+            </div>
+            <div>
+              <span style="display:block; font-size:11px; color:var(--accent-teal); font-weight:700; text-transform:uppercase; letter-spacing:0.8px;">ROLE & SERVICES</span>
+              <strong id="project-role" style="font-size:14.5px; color:var(--text-white);">Creative Director & Editor</strong>
+            </div>
+            <div>
+              <span style="display:block; font-size:11px; color:var(--accent-teal); font-weight:700; text-transform:uppercase; letter-spacing:0.8px;">PROJECT VIEWS</span>
+              <strong id="project-views" style="font-size:14.5px; color:var(--accent-orange);">4,850 Views</strong>
+            </div>
+            <div>
+              <span style="display:block; font-size:11px; color:var(--accent-teal); font-weight:700; text-transform:uppercase; letter-spacing:0.8px;">CORE TOOLS</span>
+              <strong id="project-tools" style="font-size:14.5px; color:var(--text-white);">Premiere Pro, DaVinci</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- Featured Media Showcase -->
+        <div style="width:100%; aspect-ratio: 16/9; border-radius: 20px; overflow: hidden; margin-bottom: 36px; border: 1px solid var(--glass-border); box-shadow: 0 20px 40px rgba(0,0,0,0.6);">
+          <img id="project-image" src="card1.jpg" alt="Project Showcase" style="width:100%; height:100%; object-fit:cover;">
+        </div>
+
+        <!-- Case Study Full Content -->
+        <div id="project-content" style="font-size: 16.5px; line-height: 1.8; color: #d1d1d6;">
+          <p>Loading project case study...</p>
+        </div>
+
+        <!-- Performance Metrics & Results -->
+        <div style="background: rgba(44,143,143,0.08); border: 1px solid rgba(44,143,143,0.3); padding: 28px; border-radius: 16px; margin: 40px 0;">
+          <h3 style="font-size: 20px; font-weight: 800; color: var(--text-white); margin-bottom: 16px; display:flex; align-items:center; gap:10px;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2c8f8f" stroke-width="2.5"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+            Key Campaign Results & Impact
+          </h3>
+          <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:20px;" id="project-metrics">
+            <div style="background:rgba(0,0,0,0.4); padding:16px; border-radius:12px; text-align:center;">
+              <span style="font-size:28px; font-weight:800; color:var(--accent-orange); display:block;">+350%</span>
+              <span style="font-size:13px; color:var(--text-muted);">Audience Retention Boost</span>
+            </div>
+            <div style="background:rgba(0,0,0,0.4); padding:16px; border-radius:12px; text-align:center;">
+              <span style="font-size:28px; font-weight:800; color:var(--accent-teal); display:block;">12.8%</span>
+              <span style="font-size:13px; color:var(--text-muted);">Click-Through Rate (CTR)</span>
+            </div>
+            <div style="background:rgba(0,0,0,0.4); padding:16px; border-radius:12px; text-align:center;">
+              <span style="font-size:28px; font-weight:800; color:var(--text-white); display:block;">100K+</span>
+              <span style="font-size:13px; color:var(--text-muted);">Organic Video Impressions</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Consultation Call to Action -->
+        <div style="background: radial-gradient(circle at 50% 50%, rgba(44,143,143,0.18) 0%, rgba(34,34,32,0.95) 100%); border: 1px solid rgba(44,143,143,0.35); padding: 32px; border-radius: 20px; text-align: center; margin-top: 50px;">
+          <h3 style="font-size: 24px; font-weight: 800; color: var(--text-white); margin-bottom: 10px;">Ready to Elevate Your Brand's Visual Storytelling?</h3>
+          <p style="font-size: 15px; color: var(--text-muted); max-width: 550px; margin: 0 auto 20px;">Let's create high-impact video content for your brand or YouTube channel.</p>
+          <button class="btn-pill-orange-cta" onclick="openConsultationModal()" style="font-size: 15px; padding: 12px 28px;">
+            Start a Consultation Project
+          </button>
+        </div>
+
+      </article>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="contact-section" id="contact">
+      <div class="footer-inner-wrapper">
+        <div class="footer-grid">
+          
+          <div class="footer-col brand-col">
+            <a href="index.html" class="footer-logo">
+              <img src="logo.png" alt="Atahar Noor Munna Logo" class="footer-logo-img">
+              <span>Atahar Noor <span>Munna</span></span>
+            </a>
+            <p class="footer-bio" data-i18n="footer_bio">
+              Cinematographer & Creative Visualizer delivering high-impact video content, YouTube SEO strategies, and creative direction.
+            </p>
+            <div class="social-links-row">
+              <a href="https://www.facebook.com/naeemdaprince" target="_blank" class="social-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+              <a href="https://youtube.com/@chirayat2.0" target="_blank" class="social-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+              <a href="https://youtube.com/@ataharnoormunnaartist" target="_blank" class="social-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg></a>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-col-title" data-i18n="channels_title">DIRECT CHANNELS</h4>
+            <div class="contact-links-list">
+              <a href="mailto:ataharnoormunnabhai@gmail.com" class="footer-contact-link">ataharnoormunnabhai@gmail.com</a>
+              <a href="tel:01331758098" class="footer-contact-link">+880 1331 758098</a>
+              <a href="https://wa.me/8801331758098" target="_blank" class="footer-contact-link highlight">WhatsApp: +8801331758098</a>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-col-title" data-i18n="entities_title">ENTITIES MANAGED</h4>
+            <ul class="footer-entities-list">
+              <li>Chirayat (CEO)</li>
+              <li>Motivational Channel (@chirayat2.0)</li>
+              <li>Nasheed Channel (@ataharnoormunnaartist)</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="footer-bottom">
+          <p class="copyright-text">&copy; 2026 Atahar Noor Munna | All Right Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Consultation Modal -->
+  <div class="modal-overlay" id="consultation-modal">
+    <div class="modal-card">
+      <button class="modal-close-btn" onclick="closeConsultationModal()">✕</button>
+      <h3 class="modal-title">Book Consultation Session</h3>
+      <form id="consultation-form" onsubmit="handleFormSubmit(event)">
+        <div class="modal-form-group">
+          <label class="modal-label">FULL NAME *</label>
+          <input type="text" id="modal-name" class="modal-input" placeholder="your full name" required>
+        </div>
+        <div class="modal-form-group">
+          <label class="modal-label">WHATSAPP / MOBILE NUMBER *</label>
+          <input type="tel" id="modal-phone" class="modal-input" placeholder="+88017XXXXXXXX" required>
+        </div>
+        <div class="modal-form-group">
+          <label class="modal-label">REQUIREMENTS *</label>
+          <textarea id="modal-requirements" class="modal-textarea" placeholder="Tell us about your requirements..." required></textarea>
+        </div>
+        <div class="modal-actions">
+          <button type="submit" class="btn-confirm-submit">CONFIRM & SUBMIT</button>
+          <button type="button" class="btn-send-whatsapp" onclick="sendToWhatsApp()">LAUNCH WHATSAPP</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+      let slug = params.get('slug') || 'motivational-video-series-production-for-chirayat';
+
+      if (window.renderProjectDetailPage) {
+        window.renderProjectDetailPage(slug);
+      }
+    });
+  </script>
+</body>
+</html>

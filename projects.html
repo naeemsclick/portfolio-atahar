@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects & Visual Portfolio — Atahar Noor Munna</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="subpage-bg">
+
+  <!-- Floating Sparkles Container -->
+  <div class="sparkle-container">
+    <div class="sparkle" style="left: 10%; animation-delay: 0s;"></div>
+    <div class="sparkle" style="left: 30%; animation-delay: 2s;"></div>
+    <div class="sparkle" style="left: 55%; animation-delay: 1s;"></div>
+    <div class="sparkle" style="left: 75%; animation-delay: 3s;"></div>
+    <div class="sparkle" style="left: 90%; animation-delay: 1.5s;"></div>
+  </div>
+
+  <!-- Main Content Wrapper Overlay -->
+  <div class="content-wrapper">
+
+    <!-- Header Navbar -->
+    <header class="navbar">
+      <div class="navbar-inner">
+        <!-- Left: Logo -->
+        <a href="index.html" class="nav-brand">
+          <img src="logo.png" alt="Atahar Noor Munna Logo" class="brand-logo-img">
+          <div class="brand-text">
+            <span class="brand-name">Atahar Noor Munna</span>
+            <span class="brand-sub" data-i18n="brand_sub">CREATIVE VISUALIZER</span>
+          </div>
+        </a>
+
+        <!-- Center: Nav Links -->
+        <nav class="nav-menu">
+          <ul class="nav-links">
+            <li><a href="index.html" class="nav-link" data-i18n="nav_home">Home</a></li>
+            <li><a href="index.html#about" class="nav-link" data-i18n="nav_about">About Me</a></li>
+            <li><a href="projects.html" class="nav-link active"><span data-i18n="nav_projects">Project</span> <span class="active-dot"></span></a></li>
+            <li><a href="index.html#experience" class="nav-link" data-i18n="nav_experience">Experience</a></li>
+            <li><a href="index.html#skills" class="nav-link" data-i18n="nav_skills">Skill</a></li>
+            <li><a href="index.html#education" class="nav-link" data-i18n="nav_education">Education</a></li>
+            <li><a href="blog.html" class="nav-link" data-i18n="nav_blog">Blog</a></li>
+            <li>
+              <a href="javascript:void(0)" onclick="navigator.clipboard.writeText(window.location.href); alert('Portfolio link copied to clipboard!');" class="nav-link mobile-share-link">
+                <span style="display:inline-flex; align-items:center; gap:8px; color:var(--accent-teal);">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="18" cy="5" r="3"></circle>
+                    <circle cx="6" cy="12" r="3"></circle>
+                    <circle cx="18" cy="19" r="3"></circle>
+                    <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                    <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                  </svg>
+                  Share Portfolio Link
+                </span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Right: Actions -->
+        <div class="nav-actions">
+          <button class="nav-lang-btn" id="lang-toggle-btn" aria-label="Switch Language">
+            <span class="lang-icon-wrap">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              </svg>
+            </span>
+            <span id="lang-btn-text">Bangla</span>
+          </button>
+
+          <button class="btn-pill-orange-cta" onclick="openConsultationModal()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+            <span data-i18n="lets_talk">Let's Talk</span>
+          </button>
+
+          <!-- Mobile Hamburger Menu Button -->
+          <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Page Header Banner -->
+    <div class="page-header-banner">
+      <span class="section-accent-tag" data-i18n="proj_header_tag">Portfolio Showcase</span>
+      <h1 class="section-title" style="margin-bottom:12px;" data-i18n="proj_header_title">Featured Projects & Visual Works</h1>
+      <p class="hero-description" style="margin:0 auto 32px;" data-i18n="proj_header_desc">A selection of cinematography, video editing, color grading and YouTube SEO case studies.</p>
+    </div>
+
+    <!-- Filter Bar -->
+    <div class="filter-bar">
+      <div class="filter-tabs">
+        <button class="filter-btn active" onclick="filterProjects('all', this)" data-i18n="tab_all">All Projects</button>
+        <button class="filter-btn" onclick="filterProjects('cinematography', this)" data-i18n="tab_cinema">Cinematography</button>
+        <button class="filter-btn" onclick="filterProjects('editing', this)" data-i18n="tab_editing">Video Editing</button>
+        <button class="filter-btn" onclick="filterProjects('grading', this)" data-i18n="tab_grading">Color Grading</button>
+        <button class="filter-btn" onclick="filterProjects('seo', this)" data-i18n="tab_seo">YouTube SEO</button>
+      </div>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="blog-grid" id="projects-grid">
+      <div class="blog-card" data-category="editing">
+        <a href="project-detail.html?slug=motivational-video-series-production-for-chirayat" class="blog-card-img-link">
+          <img src="card1.jpg" alt="Chirayat Motivational Series" class="blog-card-img">
+        </a>
+        <div class="blog-card-body">
+          <div class="blog-meta-row">
+            <span class="blog-category-tag" data-i18n="p1_cat">Cinematography & Editing</span>
+            <span class="blog-views-count">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/></svg>
+              4,850 views
+            </span>
+          </div>
+          <h3 class="blog-card-title"><a href="project-detail.html?slug=motivational-video-series-production-for-chirayat" data-i18n="p1_title">Motivational Video Series Production for Chirayat</a></h3>
+          <p class="blog-card-excerpt" data-i18n="p1_desc">High-impact motivational video production featuring custom lighting, multi-cam editing, and color grading.</p>
+          <a href="project-detail.html?slug=motivational-video-series-production-for-chirayat" style="color:var(--accent-teal); font-size:13px; font-weight:700; text-decoration:none; margin-top:10px; display:inline-flex; align-items:center; gap:4px;">View Full Case Study →</a>
+        </div>
+      </div>
+
+      <div class="blog-card" data-category="cinematography">
+        <a href="project-detail.html?slug=islamic-music-video-nasheed-visual-direction" class="blog-card-img-link">
+          <img src="card3.jpg" alt="Nasheed Music Video Visuals" class="blog-card-img">
+        </a>
+        <div class="blog-card-body">
+          <div class="blog-meta-row">
+            <span class="blog-category-tag" data-i18n="p2_cat">Nasheed & Visuals</span>
+            <span class="blog-views-count">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/></svg>
+              9,120 views
+            </span>
+          </div>
+          <h3 class="blog-card-title"><a href="project-detail.html?slug=islamic-music-video-nasheed-visual-direction" data-i18n="p2_title">Islamic Music Video & Nasheed Visual Direction</a></h3>
+          <p class="blog-card-excerpt" data-i18n="p2_desc">Complete visual direction and post-production editing for top Islamic music releases.</p>
+          <a href="project-detail.html?slug=islamic-music-video-nasheed-visual-direction" style="color:var(--accent-teal); font-size:13px; font-weight:700; text-decoration:none; margin-top:10px; display:inline-flex; align-items:center; gap:4px;">View Full Case Study →</a>
+        </div>
+      </div>
+
+      <div class="blog-card" data-category="seo">
+        <a href="project-detail.html?slug=client-channel-growth-0-to-100k-subscribers-case-study" class="blog-card-img-link">
+          <img src="atahar_noor.jpg" alt="YouTube Channel Growth" class="blog-card-img">
+        </a>
+        <div class="blog-card-body">
+          <div class="blog-meta-row">
+            <span class="blog-category-tag" data-i18n="p3_cat">YouTube SEO</span>
+            <span class="blog-views-count">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/></svg>
+              6,340 views
+            </span>
+          </div>
+          <h3 class="blog-card-title"><a href="project-detail.html?slug=client-channel-growth-0-to-100k-subscribers-case-study" data-i18n="p3_title">Client Channel Growth: 0 to 100K Subscribers Case Study</a></h3>
+          <p class="blog-card-excerpt" data-i18n="p3_desc">Comprehensive YouTube SEO keyword optimization, metadata restructuring, and click-through rate optimization.</p>
+          <a href="project-detail.html?slug=client-channel-growth-0-to-100k-subscribers-case-study" style="color:var(--accent-teal); font-size:13px; font-weight:700; text-decoration:none; margin-top:10px; display:inline-flex; align-items:center; gap:4px;">View Full Case Study →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Full 3-Column Footer Section -->
+    <footer class="contact-section" id="contact">
+      <div class="footer-inner-wrapper">
+        <div class="footer-grid">
+          
+          <!-- Column 1: Brand & Short Bio -->
+          <div class="footer-col brand-col">
+            <a href="index.html" class="footer-logo">
+              <img src="logo.png" alt="Atahar Noor Munna Logo" class="footer-logo-img">
+              <span>Atahar Noor <span>Munna</span></span>
+            </a>
+            <p class="footer-bio" data-i18n="footer_bio">
+              Cinematographer & Creative Visualizer delivering high-impact video content, YouTube SEO strategies, and creative direction.
+            </p>
+            <div class="social-links-row">
+              <a href="https://www.facebook.com/naeemdaprince" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Facebook">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+              </a>
+              <a href="https://youtube.com/@chirayat2.0" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="YouTube Motivational">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                </svg>
+              </a>
+              <a href="https://youtube.com/@ataharnoormunnaartist" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="YouTube Nasheed">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+                </svg>
+              </a>
+              <a href="mailto:ataharnoormunnabhai@gmail.com" class="social-btn" aria-label="Email">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Column 2: DIRECT CHANNELS -->
+          <div class="footer-col">
+            <h4 class="footer-col-title" data-i18n="channels_title">DIRECT CHANNELS</h4>
+            <div class="contact-links-list">
+              <a href="mailto:ataharnoormunnabhai@gmail.com" class="footer-contact-link">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="link-icon">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+                ataharnoormunnabhai@gmail.com
+              </a>
+              <a href="tel:01331758098" class="footer-contact-link">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="link-icon">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+                +880 1331 758098
+              </a>
+              <a href="https://wa.me/8801331758098" target="_blank" rel="noopener noreferrer" class="footer-contact-link highlight">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="link-icon">
+                  <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
+                </svg>
+                WhatsApp: +8801331758098
+              </a>
+            </div>
+          </div>
+
+          <!-- Column 3: ENTITIES MANAGED -->
+          <div class="footer-col">
+            <h4 class="footer-col-title" data-i18n="entities_title">ENTITIES MANAGED</h4>
+            <ul class="footer-entities-list">
+              <li>Chirayat (CEO)</li>
+              <li>Motivational Channel (@chirayat2.0)</li>
+              <li>Nasheed Channel (@ataharnoormunnaartist)</li>
+              <li>10+ Partner Companies</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="footer-bottom">
+          <p class="copyright-text">&copy; 2026 Atahar Noor Munna | All Right Reserved.</p>
+          <div class="created-by-container">
+            <span class="created-label" data-i18n="created_by">Created by</span>
+            <a href="https://www.facebook.com/naeemdaprince" target="_blank" rel="noopener noreferrer" class="created-badge">
+              <span class="created-fb-icon">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+              </span>
+              Naeem Nahiyan
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Consultation Pop-up Form Modal (Glowing Border, Clean Title) -->
+  <div class="modal-overlay" id="consultation-modal">
+    <div class="modal-card">
+      <button class="modal-close-btn" onclick="closeConsultationModal()" aria-label="Close">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <h3 class="modal-title">Book Consultation Session</h3>
+      <p class="modal-subtitle">Submit details directly to our secured pipeline, or launch instantly via WhatsApp.</p>
+
+      <form id="consultation-form" onsubmit="handleFormSubmit(event)">
+        <div class="modal-form-group">
+          <label class="modal-label">FULL NAME *</label>
+          <div class="input-wrapper">
+            <span class="input-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </span>
+            <input type="text" id="modal-name" class="modal-input" placeholder="your full name" required>
+          </div>
+        </div>
+
+        <div class="modal-form-group">
+          <label class="modal-label">WHATSAPP / MOBILE NUMBER *</label>
+          <div class="input-wrapper">
+            <span class="input-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+            </span>
+            <input type="tel" id="modal-phone" class="modal-input" placeholder="+88017XXXXXXXX" required>
+          </div>
+        </div>
+
+        <div class="modal-form-group">
+          <label class="modal-label">WHAT YOU WANT / CONSULTATION REQUIREMENTS *</label>
+          <div class="input-wrapper">
+            <span class="input-icon" style="top:16px;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+              </svg>
+            </span>
+            <textarea id="modal-requirements" class="modal-textarea" placeholder="Tell us about your video editing, cinematography or YouTube SEO requirements..." required></textarea>
+          </div>
+        </div>
+
+        <div class="modal-actions">
+          <button type="submit" class="btn-confirm-submit">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+            CONFIRM & SUBMIT
+          </button>
+
+          <button type="button" class="btn-send-whatsapp" onclick="sendToWhatsApp()">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
+            </svg>
+            LAUNCH WHATSAPP
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

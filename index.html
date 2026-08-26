@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atahar Noor Munna — CEO, Cinematographer & Creative Visualizer</title>
+
+  <!-- Open Graph / Facebook Social Sharing Meta Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Atahar Noor Munna — CEO, Cinematographer & Creative Visualizer">
+  <meta property="og:description" content="Official Portfolio of Atahar Noor Munna — Experienced Cinematographer, Creative Visualizer, Video Editor & CEO at Chirayat.">
+  <meta property="og:image" content="atahar_noor.jpg">
+
+  <!-- Twitter Social Sharing Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Atahar Noor Munna — CEO, Cinematographer & Creative Visualizer">
+  <meta name="twitter:description" content="Official Portfolio of Atahar Noor Munna — Experienced Cinematographer, Creative Visualizer, Video Editor & CEO at Chirayat.">
+  <meta name="twitter:image" content="atahar_noor.jpg">
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Fixed Canvas for Scroll Frame Animation -->
+  <canvas id="frame-canvas"></canvas>
+
+  <!-- Main Content Wrapper Overlay -->
+  <div class="content-wrapper">
+
+    <!-- Header Navbar -->
+    <header class="navbar">
+      <div class="navbar-inner">
+        <!-- Left: Logo & Subtitle -->
+        <a href="#home" class="nav-brand">
+          <img src="logo.png" alt="Atahar Noor Munna Logo" class="brand-logo-img">
+          <div class="brand-text">
+            <span class="brand-name">Atahar Noor Munna</span>
+            <span class="brand-sub" data-i18n="brand_sub">CREATIVE VISUALIZER</span>
+          </div>
+        </a>
+
+        <!-- Center: Nav Links -->
+        <nav class="nav-menu">
+          <ul class="nav-links">
+            <li><a href="#home" class="nav-link active"><span data-i18n="nav_home">Home</span> <span class="active-dot"></span></a></li>
+            <li><a href="#about" class="nav-link" data-i18n="nav_about">About Me</a></li>
+            <li><a href="projects.html" class="nav-link" data-i18n="nav_projects">Project</a></li>
+            <li><a href="#experience" class="nav-link" data-i18n="nav_experience">Experience</a></li>
+            <li><a href="#skills" class="nav-link" data-i18n="nav_skills">Skill</a></li>
+            <li><a href="#education" class="nav-link" data-i18n="nav_education">Education</a></li>
+            <li><a href="blog.html" class="nav-link" data-i18n="nav_blog">Blog</a></li>
+            <li>
+              <a href="javascript:void(0)" onclick="navigator.clipboard.writeText(window.location.href); alert('Portfolio link copied to clipboard!');" class="nav-link mobile-share-link">
+                <span style="display:inline-flex; align-items:center; gap:8px; color:var(--accent-teal);">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="18" cy="5" r="3"></circle>
+                    <circle cx="6" cy="12" r="3"></circle>
+                    <circle cx="18" cy="19" r="3"></circle>
+                    <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                    <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                  </svg>
+                  Share Portfolio Link
+                </span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Right: Utility Actions & CTA Button -->
+        <div class="nav-actions">
+          <!-- Share button -->
+          <button class="nav-icon-btn" id="share-btn" aria-label="Share" onclick="navigator.clipboard.writeText(window.location.href); alert('Portfolio link copied to clipboard!');">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="18" cy="5" r="3"></circle>
+              <circle cx="6" cy="12" r="3"></circle>
+              <circle cx="18" cy="19" r="3"></circle>
+              <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+              <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+            </svg>
+          </button>
+
+          <!-- Language Toggle Button with Icon & Spacing -->
+          <button class="nav-lang-btn" id="lang-toggle-btn" aria-label="Switch Language">
+            <span class="lang-icon-wrap">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              </svg>
+            </span>
+            <span id="lang-btn-text">Bangla</span>
+          </button>
+
+          <!-- Let's Talk CTA button -->
+          <button class="btn-pill-orange-cta" onclick="openConsultationModal()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+            <span data-i18n="lets_talk">Let's Talk</span>
+          </button>
+
+          <!-- Mobile Hamburger Menu Button -->
+          <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Hero Section -->
+    <section class="hero-section" id="home">
+      <div class="hero-top">
+        <div class="hero-left">
+          <span class="hero-tag" data-i18n="hero_tag">CEO, CHIRAYAT • CINEMATOGRAPHER</span>
+          <h1 class="hero-title" data-i18n="hero_title">Atahar Noor<br>Munna</h1>
+        </div>
+        <div class="hero-right">
+          <h2 class="hero-statement" data-i18n="hero_statement">Crafting visual stories that connect, convert & elevate brands.</h2>
+          <p class="hero-description" data-i18n="hero_desc">Creative Visualizer, Video Editor & YouTube SEO Expert with 3+ years of experience delivering high-impact video content for 10+ companies.</p>
+        </div>
+      </div>
+
+      <!-- Hero Features Row -->
+      <div class="hero-features">
+        <div class="feature-item">
+          <span class="feature-number">#01</span>
+          <span class="feature-name" data-i18n="feature_1">Cinematography & Video Editing</span>
+        </div>
+        <div class="feature-item">
+          <span class="feature-number">#02</span>
+          <span class="feature-name" data-i18n="feature_2">Creative Visualization</span>
+        </div>
+        <div class="feature-item">
+          <span class="feature-number">#03</span>
+          <span class="feature-name" data-i18n="feature_3">YouTube SEO & Growth</span>
+        </div>
+        <div class="feature-item">
+          <span class="feature-number">#04</span>
+          <span class="feature-name" data-i18n="feature_4">Nasheed Performance</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Platforms & Channels Bar Section -->
+    <section class="brands-section">
+      <div class="brands-bar">
+        <p class="brands-title" data-i18n="brands_title">Platforms & Leadership Roles</p>
+        <div class="brands-logos">
+          <a href="https://youtube.com/@chirayat2.0" target="_blank" class="brand-item">
+            <span class="brand-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+              </svg>
+            </span>
+            Motivational (@chirayat2.0)
+          </a>
+          <a href="https://youtube.com/@ataharnoormunnaartist" target="_blank" class="brand-item">
+            <span class="brand-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+              </svg>
+            </span>
+            Nasheed Channel
+          </a>
+          <div class="brand-item">
+            <span class="brand-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+              </svg>
+            </span>
+            CEO @ Chirayat
+          </div>
+          <div class="brand-item">
+            <span class="brand-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+            </span>
+            3+ Yrs Experience
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: About & Professional Summary -->
+    <section class="behind-designs-section" id="about">
+      <div class="behind-header">
+        <div class="behind-left">
+          <span class="section-accent-tag" data-i18n="about_tag">Professional Summary</span>
+          <h2 class="behind-title" data-i18n="about_title">Combining<br>Technical Expertise<br>With Storytelling</h2>
+        </div>
+        <div class="behind-right">
+          <p class="behind-lead" data-i18n="about_lead">Experienced Cinematographer & Creative Visualizer with 3+ years of hands-on experience delivering professional video content for 10+ companies.</p>
+          <div class="behind-actions">
+            <div class="behind-subtext" data-i18n="about_subtext">
+              Specialized in Video Editing, YouTube SEO & Nasheed Performance.<br>Committed to high-impact visual storytelling.
+            </div>
+            <button onclick="openConsultationModal()" class="btn-pill-orange">
+              <span data-i18n="lets_talk">Let's Talk</span>
+              <span class="icon-arrow-white">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 Showcase Cards Grid -->
+      <div class="cards-grid">
+        <a href="project-detail.html?slug=motivational-video-series-production-for-chirayat" class="card-item">
+          <img src="card1.jpg" alt="Cinematography & Studio Editing Workstation" class="card-image">
+          <div class="card-overlay">
+            <span class="card-tag" data-i18n="card_1_tag">3+ Years | 10+ Companies</span>
+            <h3 class="card-title" data-i18n="card_1_title">Cinematography & Video Editing</h3>
+          </div>
+        </a>
+        <a href="project-detail.html?slug=client-channel-growth-0-to-100k-subscribers-case-study" class="card-item">
+          <img src="atahar_noor.jpg" alt="Atahar Noor Munna - CEO Chirayat" class="card-image">
+          <div class="card-overlay">
+            <span class="card-tag" data-i18n="card_2_tag">CEO @ Chirayat</span>
+            <h3 class="card-title" data-i18n="card_2_title">Atahar Noor Munna</h3>
+          </div>
+        </a>
+        <a href="project-detail.html?slug=islamic-music-video-nasheed-visual-direction" class="card-item">
+          <img src="card3.jpg" alt="Camera Setup & Editing Timeline Monitor" class="card-image">
+          <div class="card-overlay">
+            <span class="card-tag" data-i18n="card_3_tag">YouTube SEO & Artist</span>
+            <h3 class="card-title" data-i18n="card_3_title">YouTube SEO & Nasheed Artist</h3>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Professional Experience Section -->
+    <section class="experience-section" id="experience">
+      <span class="section-accent-tag" data-i18n="exp_tag">Career Journey</span>
+      <h2 class="section-title" data-i18n="exp_title">Professional Experience</h2>
+
+      <div class="timeline-grid">
+        <div class="timeline-card">
+          <h3 class="timeline-role" data-i18n="role_1_title">CEO — Chirayat</h3>
+          <span class="timeline-meta" data-i18n="role_1_meta">Current Leadership Role</span>
+          <ul class="timeline-list">
+            <li data-i18n="role_1_p1">Leads Chirayat's creative direction, content strategy, and channel growth.</li>
+            <li data-i18n="role_1_p2">Oversees production quality across motivational and creative video content.</li>
+          </ul>
+        </div>
+
+        <div class="timeline-card">
+          <h3 class="timeline-role" data-i18n="role_2_title">Cinematographer & Video Editor</h3>
+          <span class="timeline-meta" data-i18n="role_2_meta">3 Years | 10+ Companies</span>
+          <ul class="timeline-list">
+            <li data-i18n="role_2_p1">Delivered cinematography and video editing services for a range of brands and organizations.</li>
+            <li data-i18n="role_2_p2">Produced professional-grade visual content using Adobe Premiere Pro, After Effects, DaVinci Resolve, CapCut, and Filmora Pro.</li>
+            <li data-i18n="role_2_p3">Applied color grading, motion graphics, and creative visualization to strengthen storytelling.</li>
+          </ul>
+        </div>
+
+        <div class="timeline-card">
+          <h3 class="timeline-role" data-i18n="role_3_title">YouTube SEO Expert</h3>
+          <span class="timeline-meta" data-i18n="role_3_meta">2017 — Present</span>
+          <ul class="timeline-list">
+            <li data-i18n="role_3_p1">Worked on YouTube SEO for personal and client channels since 2017.</li>
+            <li data-i18n="role_3_p2">Contributed to increased viewership and search ranking across multiple channels.</li>
+          </ul>
+        </div>
+
+        <div class="timeline-card">
+          <h3 class="timeline-role" data-i18n="role_4_title">Nasheed Artist</h3>
+          <span class="timeline-meta" data-i18n="role_4_meta">4 Years Experience</span>
+          <ul class="timeline-list">
+            <li data-i18n="role_4_p1">Performing as an artist within the Islamic Nasheed industry for the past 4 years.</li>
+            <li data-i18n="role_4_p2">Regularly creates and publishes content on his own Nasheed channel.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills & Software Section -->
+    <section class="skills-section" id="skills">
+      <span class="section-accent-tag" data-i18n="skills_tag">Technical Mastery</span>
+      <h2 class="section-title" data-i18n="skills_title">Editing Software & Core Skills</h2>
+
+      <div class="skills-wrapper">
+        <div class="skills-box">
+          <h3 class="box-heading">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="2" width="20" height="20" rx="4"/>
+              <path d="M10 8l6 4-6 4V8z"/>
+            </svg>
+            <span data-i18n="sw_heading">Editing Software Proficiency</span>
+          </h3>
+          <div class="software-list">
+            <div class="software-item">
+              <span class="software-name">Adobe Premiere Pro</span>
+              <span class="software-badge">Expert</span>
+            </div>
+            <div class="software-item">
+              <span class="software-name">Adobe After Effects</span>
+              <span class="software-badge">Expert</span>
+            </div>
+            <div class="software-item">
+              <span class="software-name">DaVinci Resolve</span>
+              <span class="software-badge">Expert</span>
+            </div>
+            <div class="software-item">
+              <span class="software-name">CapCut</span>
+              <span class="software-badge">Expert</span>
+            </div>
+            <div class="software-item">
+              <span class="software-name">Filmora Pro</span>
+              <span class="software-badge">Expert</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills-box">
+          <h3 class="box-heading">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+            <span data-i18n="core_heading">Core Competencies</span>
+          </h3>
+          <div class="tags-cloud">
+            <span class="skill-tag">Cinematography</span>
+            <span class="skill-tag">Creative Visualization</span>
+            <span class="skill-tag">YouTube SEO</span>
+            <span class="skill-tag">Color Grading</span>
+            <span class="skill-tag">Motion Graphics</span>
+            <span class="skill-tag">Leadership & Team Management</span>
+            <span class="skill-tag">Nasheed Performance</span>
+            <span class="skill-tag">Channel Strategy</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education & Languages Section -->
+    <section class="edu-section" id="education">
+      <span class="section-accent-tag" data-i18n="edu_tag">Background</span>
+      <h2 class="section-title" data-i18n="edu_title">Education & Languages</h2>
+
+      <div class="edu-grid">
+        <div class="edu-cards">
+          <div class="edu-card">
+            <h3 class="edu-title" data-i18n="edu_1_title">Dawra-e-Hadith</h3>
+            <span class="edu-year">2024</span>
+          </div>
+          <div class="edu-card">
+            <h3 class="edu-title" data-i18n="edu_2_title">Hifzul Quran</h3>
+            <span class="edu-year" data-i18n="edu_2_year">Completed 2018</span>
+          </div>
+          <div class="edu-card">
+            <h3 class="edu-title" data-i18n="edu_3_title">SSC</h3>
+            <span class="edu-year">2020</span>
+          </div>
+        </div>
+
+        <div class="lang-box">
+          <h3 class="box-heading" style="font-size:18px; margin-bottom:16px;" data-i18n="lang_heading">Languages</h3>
+          <div class="tags-cloud">
+            <span class="skill-tag" data-i18n="lang_bn">Bangla (Native)</span>
+            <span class="skill-tag" data-i18n="lang_en">English</span>
+            <span class="skill-tag" data-i18n="lang_ar">Arabic</span>
+            <span class="skill-tag" data-i18n="lang_ur">Urdu</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section (Full Width Background with Camera Logo before Name) -->
+    <footer class="contact-section" id="contact">
+      <div class="footer-inner-wrapper">
+        <div class="footer-grid">
+          
+          <!-- Column 1: Brand & Short Bio -->
+          <div class="footer-col brand-col">
+            <a href="#home" class="footer-logo">
+              <img src="logo.png" alt="Atahar Noor Munna Logo" class="footer-logo-img">
+              <span>Atahar Noor <span>Munna</span></span>
+            </a>
+            <p class="footer-bio" data-i18n="footer_bio">
+              Cinematographer & Creative Visualizer delivering high-impact video content, YouTube SEO strategies, and creative direction.
+            </p>
+            <div class="social-links-row">
+              <a href="https://www.facebook.com/naeemdaprince" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Facebook">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+              </a>
+              <a href="https://youtube.com/@chirayat2.0" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="YouTube Motivational">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                </svg>
+              </a>
+              <a href="https://youtube.com/@ataharnoormunnaartist" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="YouTube Nasheed">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+                </svg>
+              </a>
+              <a href="mailto:ataharnoormunnabhai@gmail.com" class="social-btn" aria-label="Email">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Column 2: DIRECT CHANNELS -->
+          <div class="footer-col">
+            <h4 class="footer-col-title" data-i18n="channels_title">DIRECT CHANNELS</h4>
+            <div class="contact-links-list">
+              <a href="mailto:ataharnoormunnabhai@gmail.com" class="footer-contact-link">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="link-icon">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+                ataharnoormunnabhai@gmail.com
+              </a>
+              <a href="tel:01331758098" class="footer-contact-link">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="link-icon">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+                +880 1331 758098
+              </a>
+              <a href="https://wa.me/8801331758098" target="_blank" rel="noopener noreferrer" class="footer-contact-link highlight">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="link-icon">
+                  <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
+                </svg>
+                WhatsApp: +8801331758098
+              </a>
+            </div>
+          </div>
+
+          <!-- Column 3: ENTITIES MANAGED -->
+          <div class="footer-col">
+            <h4 class="footer-col-title" data-i18n="entities_title">ENTITIES MANAGED</h4>
+            <ul class="footer-entities-list">
+              <li>Chirayat (CEO)</li>
+              <li>Motivational Channel (@chirayat2.0)</li>
+              <li>Nasheed Channel (@ataharnoormunnaartist)</li>
+              <li>10+ Partner Companies</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="footer-bottom">
+          <p class="copyright-text">&copy; 2026 Atahar Noor Munna | All Right Reserved.</p>
+          <div class="created-by-container">
+            <span class="created-label" data-i18n="created_by">Created by</span>
+            <a href="https://www.facebook.com/naeemdaprince" target="_blank" rel="noopener noreferrer" class="created-badge">
+              <span class="created-fb-icon">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+              </span>
+              Naeem Nahiyan
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Consultation Pop-up Form Modal (Glowing Border, Clean Title) -->
+  <div class="modal-overlay" id="consultation-modal">
+    <div class="modal-card">
+      <button class="modal-close-btn" onclick="closeConsultationModal()" aria-label="Close">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <h3 class="modal-title">Book Consultation Session</h3>
+      <p class="modal-subtitle">Submit details directly to our secured pipeline, or launch instantly via WhatsApp.</p>
+
+      <form id="consultation-form" onsubmit="handleFormSubmit(event)">
+        <div class="modal-form-group">
+          <label class="modal-label">FULL NAME *</label>
+          <div class="input-wrapper">
+            <span class="input-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </span>
+            <input type="text" id="modal-name" class="modal-input" placeholder="your full name" required>
+          </div>
+        </div>
+
+        <div class="modal-form-group">
+          <label class="modal-label">WHATSAPP / MOBILE NUMBER *</label>
+          <div class="input-wrapper">
+            <span class="input-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+            </span>
+            <input type="tel" id="modal-phone" class="modal-input" placeholder="+88017XXXXXXXX" required>
+          </div>
+        </div>
+
+        <div class="modal-form-group">
+          <label class="modal-label">WHAT YOU WANT / CONSULTATION REQUIREMENTS *</label>
+          <div class="input-wrapper">
+            <span class="input-icon" style="top:16px;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+              </svg>
+            </span>
+            <textarea id="modal-requirements" class="modal-textarea" placeholder="Tell us about your video editing, cinematography or YouTube SEO requirements..." required></textarea>
+          </div>
+        </div>
+
+        <div class="modal-actions">
+          <button type="submit" class="btn-confirm-submit">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+            CONFIRM & SUBMIT
+          </button>
+
+          <button type="button" class="btn-send-whatsapp" onclick="sendToWhatsApp()">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
+            </svg>
+            LAUNCH WHATSAPP
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
